@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isabela's Matcha ✿</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/indexStyle.css">
+
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!--  SCREEN 0: INICIO / BIENVENIDA                               -->
+<!-- ============================================================ -->
+<div class="screen active" id="screen-home">
+  <div class="pixel-border-top"></div>
+
+  <div style="margin:8px 0 0; text-align:center">
+    <div class="pixel-deco">✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦</div>
+    <p class="title-main">RAÖUL'S<br>MATCHA FACTORY</p>
+    <div class="pixel-deco">✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦</div>
+  </div>
+
+  <div class="hero-sprite">
+    <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+      <!-- sombra -->
+      <rect x="30" y="130" width="100" height="12" fill="#052020" rx="6"/>
+      <!-- platito -->
+      <rect x="20" y="118" width="120" height="16" fill="#0d5a52" rx="2"/>
+      <rect x="28" y="122" width="104" height="8" fill="#1a8a7e" rx="1"/>
+      <!-- cuerpo taza -->
+      <rect x="38" y="68" width="84" height="56" fill="#0f6e5a" rx="2"/>
+      <rect x="42" y="72" width="76" height="48" fill="#1a9e8a"/>
+      <!-- borde superior taza -->
+      <rect x="34" y="64" width="92" height="10" fill="#0d5a4e"/>
+      <rect x="38" y="66" width="84" height="6" fill="#2dc4b0"/>
+      <!-- asa -->
+      <rect x="116" y="80" width="10" height="6" fill="#0f6e5a"/>
+      <rect x="122" y="86" width="8" height="16" fill="#0d5a4e"/>
+      <rect x="116" y="102" width="10" height="6" fill="#0f6e5a"/>
+      <!-- líquido matcha -->
+      <rect x="44" y="74" width="72" height="44" fill="#1d9e64"/>
+      <rect x="44" y="74" width="72" height="8" fill="#2dc47a"/>
+      <!-- espuma -->
+      <rect x="54" y="82" width="8" height="8" fill="#4de8a0" rx="1"/>
+      <rect x="66" y="86" width="6" height="6" fill="#3dd890" rx="1"/>
+      <rect x="78" y="80" width="10" height="10" fill="#4de8a0" rx="1"/>
+      <rect x="92" y="84" width="6" height="6" fill="#3dd890" rx="1"/>
+      <rect x="60" y="94" width="6" height="6" fill="#2dc47a"/>
+      <rect x="84" y="92" width="8" height="8" fill="#3dd890"/>
+      <!-- vapor -->
+      <rect x="60" y="44" width="4" height="4" fill="#4de8d0" opacity="0.7"/>
+      <rect x="56" y="36" width="4" height="4" fill="#2dc4b0" opacity="0.5"/>
+      <rect x="62" y="28" width="4" height="4" fill="#4de8d0" opacity="0.3"/>
+      <rect x="76" y="40" width="4" height="4" fill="#4de8d0" opacity="0.7"/>
+      <rect x="80" y="30" width="4" height="4" fill="#2dc4b0" opacity="0.5"/>
+      <rect x="74" y="22" width="4" height="4" fill="#4de8d0" opacity="0.3"/>
+      <rect x="92" y="42" width="4" height="4" fill="#4de8d0" opacity="0.7"/>
+      <rect x="96" y="32" width="4" height="4" fill="#2dc4b0" opacity="0.5"/>
+      <rect x="90" y="24" width="4" height="4" fill="#4de8d0" opacity="0.3"/>
+      <!-- florecita -->
+      <rect x="108" y="20" width="4" height="4" fill="#f07090"/>
+      <rect x="104" y="24" width="4" height="4" fill="#f07090"/>
+      <rect x="112" y="24" width="4" height="4" fill="#f07090"/>
+      <rect x="108" y="28" width="4" height="4" fill="#f07090"/>
+      <rect x="108" y="24" width="4" height="4" fill="#ffd4e0"/>
+      <!-- estrellitas -->
+      <rect x="18" y="40" width="4" height="4" fill="#f0c060"/>
+      <rect x="22" y="36" width="4" height="4" fill="#f0c060"/>
+      <rect x="14" y="36" width="4" height="4" fill="#f0c060"/>
+      <rect x="18" y="32" width="4" height="4" fill="#f0c060"/>
+      <rect x="18" y="36" width="4" height="4" fill="#fff8d0"/>
+    </svg>
+  </div>
+
+  <div class="pixel-box scroll-content" style="padding:20px; margin-bottom:8px">
+    <p style="font-family:var(--vt); font-size:21px; color:var(--cream); line-height:1.7; text-align:center">
+      hola miamor <span class="heart-pixel">♥</span><br><br>
+      bienvenida al instructivo para realizar un matcha guiado por nada mas y nada menos que el mísmisimo raöul huerta muñoz
+    </p>
+    <p style="font-family:var(--pixel); font-size:7px; color:var(--teal-glow); text-align:center; margin-top:16px; line-height:2; opacity:0.8">
+      que quieres hacer primero?
+    </p>
+  </div>
+
+  <div class="menu-grid">
+    <button class="btn btn-teal" onclick="showScreen('screen-tools')" style="width:100%">
+      ▶ Ver mis utensilios
+    </button>
+    <button class="btn btn-gold" onclick="showScreen('screen-steps'); initSteps()" style="width:100%">
+      ▶ Preparar matcha
+    </button>
+    <button class="btn btn-pink" onclick="showScreen('screen-letter')" style="width:100%">
+      ♥ Leer cartita
+    </button>
+  </div>
+
+  <div class="pixel-border-bottom" style="margin-top:28px"></div>
+  <p class="pixel-deco" style="margin-top:8px; font-size:7px">isabela muños  ♥  teamo</p>
+</div>
+
+
+<!-- ============================================================ -->
+<!--  SCREEN 1: UTENSILIOS                                        -->
+<!-- ============================================================ -->
+<div class="screen" id="screen-tools">
+  <div class="pixel-border-top"></div>
+  <p class="section-title">⊞ UTENSILIOS ⊞</p>
+
+  <div class="tools-grid">
+    <div class="pixel-box tool-card">
+      <span class="tool-icon">🍵</span>
+      <span class="tool-name">CHAWAN</span>
+      <span class="tool-desc">bowl con la imagen de raöul a un lado, aqui se hace todote</span>
+    </div>
+    <div class="pixel-box tool-card">
+      <span class="tool-icon">🪣</span>
+      <span class="tool-name">CHASEN</span>
+      <span class="tool-desc">batidor de bambú, hace espumita y disuelve el matcha perfectamente</span>
+    </div>
+    <div class="pixel-box tool-card">
+      <span class="tool-icon">🥄</span>
+      <span class="tool-name">CHASHAKU</span>
+      <span class="tool-desc">cucharin de bambú para medir el polvo de matcha</span>
+    </div>
+    <div class="pixel-box tool-card">
+      <span class="tool-icon">🫙</span>
+      <span class="tool-name">MATCHA</span>
+      <span class="tool-desc">polvo de té verde japonés, aromático y el faborito d mi mujer</span>
+    </div>
+    <div class="pixel-box tool-card">
+      <span class="tool-icon">🫖</span>
+      <span class="tool-name">AGUA CALIENTE</span>
+      <span class="tool-desc">70-80°C. que no esté hirviendo amor, asi cuidamos el sabor</span>
+    </div>
+    <div class="pixel-box tool-card">
+      <span class="tool-icon">🌸</span>
+      <span class="tool-name">TAMIZ</span>
+      <span class="tool-desc">el coladorsito ese jasjdhsh</span>
+    </div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn btn-teal" onclick="showScreen('screen-steps'); initSteps()">▶ Preparar</button>
+    <button class="btn btn-ghost" onclick="showScreen('screen-home')">← Inicio</button>
+  </div>
+  <div class="pixel-border-bottom"></div>
+</div>
+
+
+<!-- ============================================================ -->
+<!--  SCREEN 2: PASOS DE PREPARACIÓN                             -->
+<!-- ============================================================ -->
+<div class="screen" id="screen-steps">
+  <div class="pixel-border-top"></div>
+  <p class="section-title" id="step-title">PASO 1 — CALENTAR EL CHAWAN (Recomendable)</p>
+
+  <div class="step-indicator" id="step-dots"></div>
+
+  <div class="pixel-box sprite-container" style="padding:0; overflow:hidden">
+    <div class="comic-panel" id="step-illustration"></div>
+    <div class="panel-text" id="step-text"></div>
+  </div>
+
+  <div class="pixel-box scroll-content" style="padding:14px; margin-top:14px" id="step-tip-box">
+    <p style="font-family:var(--pixel); font-size:7px; color:var(--gold); line-height:2; text-align:center" id="step-tip"></p>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn btn-ghost" id="btn-prev" onclick="changeStep(-1)">◀ Prev</button>
+    <button class="btn btn-teal" id="btn-next" onclick="changeStep(1)">Next ▶</button>
+  </div>
+  <button class="btn btn-ghost" onclick="showScreen('screen-home')" style="margin-top:12px; font-size:7px">← Inicio</button>
+  <div class="pixel-border-bottom"></div>
+</div>
+
+
+<!-- ============================================================ -->
+<!--  SCREEN 3: FELICIDADES (fin de pasos)                        -->
+<!-- ============================================================ -->
+<div class="screen" id="screen-end">
+  <div class="pixel-border-top"></div>
+  <p class="section-title">✦ buena bola ✦</p>
+
+  <div style="margin: 20px auto; text-align:center">
+    <svg viewBox="0 0 200 180" width="200" height="180" xmlns="http://www.w3.org/2000/svg">
+      <rect x="50" y="90" width="100" height="72" fill="#0f6e5a" rx="2"/>
+      <rect x="54" y="94" width="92" height="64" fill="#1d9e8a"/>
+      <rect x="46" y="82" width="108" height="14" fill="#0d5a4e"/>
+      <rect x="50" y="85" width="100" height="8" fill="#2dc4b0"/>
+      <rect x="54" y="96" width="92" height="56" fill="#1d9e64"/>
+      <rect x="54" y="96" width="92" height="12" fill="#2dc47a"/>
+      <rect x="64" y="102" width="12" height="12" fill="#4de8a0" rx="2"/>
+      <rect x="82" y="106" width="10" height="10" fill="#3dd890" rx="2"/>
+      <rect x="98" y="100" width="14" height="14" fill="#4de8a0" rx="2"/>
+      <rect x="116" y="105" width="10" height="10" fill="#3dd890" rx="2"/>
+      <rect x="148" y="102" width="14" height="8" fill="#0f6e5a"/>
+      <rect x="156" y="110" width="10" height="24" fill="#0d5a4e"/>
+      <rect x="148" y="134" width="14" height="8" fill="#0f6e5a"/>
+      <rect x="30" y="158" width="140" height="14" fill="#0d5a52" rx="2"/>
+      <rect x="20" y="40" width="6" height="6" fill="#f0c060"/>
+      <rect x="30" y="28" width="6" height="6" fill="#f07090"/>
+      <rect x="170" y="36" width="6" height="6" fill="#f0c060"/>
+      <rect x="160" y="50" width="6" height="6" fill="#4de8d0"/>
+      <rect x="10" y="70" width="6" height="6" fill="#4de8d0"/>
+      <rect x="182" y="70" width="6" height="6" fill="#f07090"/>
+      <rect x="14" y="55" width="4" height="4" fill="#f0c060"/>
+      <rect x="178" y="55" width="4" height="4" fill="#f0c060"/>
+      <rect x="72" y="20" width="8" height="8" fill="#f07090"/>
+      <rect x="68" y="24" width="4" height="4" fill="#f07090"/>
+      <rect x="80" y="24" width="4" height="4" fill="#f07090"/>
+      <rect x="70" y="28" width="12" height="8" fill="#f07090"/>
+      <rect x="72" y="34" width="8" height="4" fill="#f07090"/>
+      <rect x="74" y="38" width="4" height="4" fill="#f07090"/>
+      <rect x="118" y="18" width="8" height="8" fill="#ffb0c8"/>
+      <rect x="114" y="22" width="4" height="4" fill="#ffb0c8"/>
+      <rect x="126" y="22" width="4" height="4" fill="#ffb0c8"/>
+      <rect x="116" y="26" width="12" height="8" fill="#ffb0c8"/>
+      <rect x="118" y="32" width="8" height="4" fill="#ffb0c8"/>
+      <rect x="120" y="36" width="4" height="4" fill="#ffb0c8"/>
+    </svg>
+  </div>
+
+  <div class="pixel-box scroll-content" style="padding:20px; text-align:center">
+    <p style="font-family:var(--vt); font-size:24px; color:var(--teal-glow); line-height:1.7">
+      tu matcha está fakin ready <span class="heart-pixel">♥</span><br><br>
+      <span style="color:var(--cream); font-size:20px">disfrutadlo con calma, en tu bowl de raöul, raböwl?</span>
+    </p>
+    <p style="font-family:var(--pixel); font-size:7px; color:var(--gold); margin-top:16px; line-height:2">
+      TIP: darle un beso al que hizo este instructivo <br> hace que sepa mas bueno c:
+    </p>
+  </div>
+
+  <div class="nav-row" style="margin-top:20px">
+    <button class="btn btn-gold" onclick="showScreen('screen-letter')">♥ cartita</button>
+    <button class="btn btn-ghost" onclick="showScreen('screen-home')">← Inicio</button>
+  </div>
+  <div class="pixel-border-bottom"></div>
+</div>
+
+
+<!-- ============================================================ -->
+<!--  SCREEN 4: CARTITA                                           -->
+<!-- ============================================================ -->
+<div class="screen" id="screen-letter">
+  <div class="pixel-border-top"></div>
+  <p class="section-title">♥ cartita digital jejejje ♥</p>
+
+  <div class="pixel-box-pink carta-paper" style="margin:8px 0">
+    <svg viewBox="0 0 300 60" width="100%" style="margin-bottom:16px" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="8" width="280" height="44" fill="#1a3a38" rx="2"/>
+      <rect x="10" y="8" width="280" height="44" fill="none" stroke="#f07090" stroke-width="3" rx="2"/>
+      <polygon points="10,8 150,40 290,8" fill="#0d3d3a" stroke="#f07090" stroke-width="2"/>
+      <rect x="134" y="30" width="12" height="12" fill="#f07090"/>
+      <rect x="130" y="34" width="4" height="4" fill="#f07090"/>
+      <rect x="146" y="34" width="4" height="4" fill="#f07090"/>
+      <rect x="132" y="38" width="16" height="8" fill="#f07090"/>
+      <rect x="134" y="44" width="12" height="4" fill="#f07090"/>
+      <rect x="136" y="48" width="8" height="4" fill="#f07090"/>
+      <rect x="138" y="52" width="4" height="2" fill="#f07090"/>
+    </svg>
+
+    <div class="carta-text">
+      <p>ola miamor,</p><br>
+      <p>Dos años junto a ti han sido el mejor regalo que la vida me ha dado. Cada día me enseñas algo nuevo sobre la paciencia, la calma y la belleza en las cosas simples.</p><br>
+      <p>Este kit de matcha es para ti, porque mereces tener tus propios rituales: momentos del día que sean solo tuyos, llenos de calma y sabor.</p><br>
+      <p>Cada vez que prepares tu taza, espero que recuerdes que te quiero profundamente.</p><br>
+      <p>Gracias por existir y por estar.</p>
+    </div>
+
+    <div class="carta-firma">
+      con mucho amor,<br>
+      <span style="color:var(--teal-glow); font-size:9px">Tu novio</span><br>
+      <span class="heart-pixel" style="font-size:14px">♥♥♥</span>
+    </div>
+
+    <div style="display:flex; gap:8px; margin-top:20px; justify-content:flex-end">
+      <svg viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="32" height="32" fill="#0d5a4e" stroke="#2dc4b0" stroke-width="2"/>
+        <rect x="14" y="12" width="12" height="12" fill="#f07090"/>
+        <rect x="10" y="16" width="4" height="4" fill="#f07090"/>
+        <rect x="26" y="16" width="4" height="4" fill="#f07090"/>
+        <rect x="12" y="20" width="16" height="8" fill="#f07090"/>
+        <rect x="14" y="26" width="12" height="4" fill="#f07090"/>
+        <rect x="16" y="30" width="8" height="4" fill="#f07090"/>
+        <rect x="18" y="34" width="4" height="2" fill="#f07090"/>
+      </svg>
+      <svg viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="32" height="32" fill="#0d5a4e" stroke="#f0c060" stroke-width="2"/>
+        <text x="20" y="26" text-anchor="middle" fill="#f0c060" font-family="'Press Start 2P'" font-size="8">II</text>
+        <text x="20" y="14" text-anchor="middle" fill="#f0c060" font-family="'Press Start 2P'" font-size="6">AÑO</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn btn-teal" onclick="showScreen('screen-steps'); initSteps()">▶ Preparar matcha</button>
+    <button class="btn btn-ghost" onclick="showScreen('screen-home')">← Inicio</button>
+  </div>
+  <div class="pixel-border-bottom"></div>
+</div>
+
+<script src="js/indexScript.js"></script>
+
+</body>
+</html>
